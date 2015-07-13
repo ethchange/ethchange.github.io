@@ -143,51 +143,56 @@
         <div class="page-header">
             <h1>ICAP transfer</h1>
         </div>
-        <div class="col-lg-6 well">
-            <legend class="lead">namereg address</legend>
-            <small>eg. 0x436474facc88948696b371052a1befb801f003ca or 'default')</small>
-            <div class="form-group">
-                <input class="form-control" type="text" id="namereg" onkeyup='onNameregKeyUp()' value="default"></input>
-                <text id="nameregValidation"></text>
-            </div>
+        <div class="col-lg-6">
+            <div class="well">
+                <legend class="lead">namereg address</legend>
+                <small>eg. 0x436474facc88948696b371052a1befb801f003ca or 'default')</small>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="namereg" onkeyup='onNameregKeyUp()' value="default"></input>
+                    <text id="nameregValidation"></text>
+                </div>
 
-            <legend class="lead">exchange identifier</legend>
-            <small>eg. WYWY</small>
-            <div class="form-group">
-                <input class="form-control" type="text" id="exchange" onkeyup='onExchangeKeyUp()'></input>
-                <text id="exchangeValidation"></text>
-            </div>
+                <legend class="lead">exchange identifier</legend>
+                <small>eg. WYWY</small>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="exchange" onkeyup='onExchangeKeyUp()'></input>
+                    <text id="exchangeValidation"></text>
+                </div>
 
-            <legend class="lead">client identifier</legend>
-            <small>eg. GAVOFYORK</small>
-            <div class="form-group">
-                <input class="form-control" type="text" id="client" onkeyup='onClientKeyUp()'></input>
-                <text id="clientValidation"></text>
-            </div>
+                <legend class="lead">client identifier</legend>
+                <small>eg. GAVOFYORK</small>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="client" onkeyup='onClientKeyUp()'></input>
+                    <text id="clientValidation"></text>
+                </div>
 
-            <legend class="lead">value</legend>
-            <small>eg. 100</small>
-            <div class="form-group">
-                <input class="form-control" type="text" id="value" onkeyup='onValueKeyUp()'></input>
-                <text id="valueValidation"></text>
-            </div>
+                <legend class="lead">value</legend>
+                <small>eg. 100</small>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="value" onkeyup='onValueKeyUp()'></input>
+                    <text id="valueValidation"></text>
+                </div>
 
-            <legend class="lead">IBAN: </legend>
-            <div class="form-group">
+                <legend class="lead">IBAN: </legend>
+                <div class="form-group">
 
-                <text id="iban"></text>
-                <text id="ibanValidation"></text>
+                    <text id="iban"></text>
+                    <text id="ibanValidation"></text>
+                </div>
+                <div>
+                    <button class="btn btn-default" id="transfer" type="button" onClick="transfer()">Transfer!</button>
+                    <text id="transferValidation"></text>
+                </div>
             </div>
-            <div>
-                <button class="btn btn-default" id="transfer" type="button" onClick="transfer()">Transfer!</button>
-                <text id="transferValidation"></text>
-            </div>
-           
-            <div>
-                <legend class="lead">transfers</legend>
-            </div>
-            <div>
-                <ul id='transfers'></ul>
+        </div>
+        <div class="col-lg-6">
+            <div class="well">
+                <div>
+                    <legend class="lead">transfers</legend>
+                </div>
+                <div>
+                    <ul id='transfers'></ul>
+                </div>
             </div>
         </div>
     </div>
